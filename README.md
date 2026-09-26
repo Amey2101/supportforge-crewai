@@ -13,7 +13,7 @@ The system uses a simulated SaaS backend called **NexaCloud** to provide custome
 
 A customer support ticket passes through a sequence of specialized agents:
 
-
+```text
 Customer Ticket
        │
        ▼
@@ -44,15 +44,12 @@ Customer Ticket
            │
            ▼
 ┌──────────────────────┐
-│  NexaCloud API       │
-│    (FastAPI)         │
+│   NexaCloud API      │
+│      (FastAPI)       │
 │                      │
 │ Customer / Payments  │
 │ Subscription State   │
 └──────────────────────┘
-
----
-
 ## Example Scenario
 
 A customer submits:
