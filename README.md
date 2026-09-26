@@ -55,54 +55,58 @@ Customer Ticket
 
 A customer submits:
 
-"I was charged twice for my subscription and I still can't access the premium features."
+> **"I was charged twice for my subscription and I still can't access the premium features."**
 
 SupportForge processes the ticket through multiple stages:
 
-Triage — determines the ticket category and severity.
-Investigation — retrieves customer, payment, and subscription information.
-Resolution — determines the appropriate action based on the investigation.
-Tool execution — performs authorized actions through the NexaCloud API.
+1. **Triage** — determines the ticket category and severity.
+2. **Investigation** — retrieves customer, payment, and subscription information.
+3. **Resolution** — determines the appropriate action based on the investigation.
+4. **Tool Execution** — performs authorized actions through the NexaCloud API.
 
-Example tools available to the agents:
+### Example Tools
 
+```python
 get_customer()
 get_payment_history()
 get_subscription()
 
 issue_refund()
 activate_subscription()
-
+```
 This allows the agents to interact with an external system rather than simply generating text.
 
 ---
 
 ## CrewAI Concepts Demonstrated
 
-Agents
+### Agents
 
 Specialized agents are responsible for different stages of the support workflow:
 
-Support Triage Specialist
-Customer Support Investigator
-Customer Support Resolution Specialist
-Tasks
+- **Support Triage Specialist**
+- **Customer Support Investigator**
+- **Customer Support Resolution Specialist**
+
+### Tasks
 
 Each agent receives a specific task containing:
 
-Task description
-Expected output
-Context from previous tasks
-Sequential Crew
+- **Task description**
+- **Expected output**
+- **Context from previous tasks**
+
+### Sequential Crew
 
 The workflow uses CrewAI's sequential process:
 
+```text
 Triage
-  ↓
+   ↓
 Investigation
-  ↓
+   ↓
 Resolution
-
+```
 The output of earlier tasks is passed into later stages as context.
 
 Custom Tools
@@ -119,7 +123,7 @@ activate_subscription()
 External API Integration
 
 The tools communicate with the FastAPI backend over HTTP:
-
+```text
 CrewAI Agent
      ↓
 CrewAI Tool
@@ -131,6 +135,7 @@ FastAPI Backend
 JSON Response
      ↓
 Agent
+```
 Agentic Tool Calling
 
 The Resolution Agent has access to authorized tools and can decide when a backend action is required.
