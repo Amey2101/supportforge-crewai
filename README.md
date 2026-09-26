@@ -168,6 +168,7 @@ Backend state changes
 
 ## Project Structure
 
+```text
 supportforge-crewai/
 │
 ├── main.py
@@ -183,6 +184,7 @@ supportforge-crewai/
 │
 ├── .gitignore
 └── README.md
+```
 Simulated NexaCloud Backend
 
 The backend represents a fictional SaaS platform.
