@@ -50,6 +50,7 @@ Customer Ticket
 │ Customer / Payments  │
 │ Subscription State   │
 └──────────────────────┘
+```
 ## Example Scenario
 
 A customer submits:
