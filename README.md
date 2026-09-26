@@ -153,12 +153,13 @@ Backend state changes
 
 ## Tech Stack
 
-Technology	Purpose
-Python	Application development
-CrewAI	Multi-agent orchestration
-OpenRouter	LLM provider
-FastAPI	Simulated NexaCloud backend
-Requests	HTTP communication between tools and backend
+| Technology | Purpose |
+|---|---|
+| **Python** | Application development |
+| **CrewAI** | Multi-agent orchestration |
+| **OpenRouter** | LLM provider |
+| **FastAPI** | Simulated NexaCloud backend |
+| **Requests** | HTTP communication between tools and backend |
 
 ---
 
